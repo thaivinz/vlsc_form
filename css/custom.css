@@ -1,0 +1,82 @@
+html,
+body {
+  background: #071426;
+}
+
+.main-wrapper {
+  min-height: 100vh;
+  background: #071426;
+}
+
+.header {
+  left: 2.1rem;
+  top: 1.45rem;
+  z-index: 30;
+}
+
+.header__logo {
+  width: clamp(88px, 7.4vw, 150px);
+}
+
+.hero {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero__bg-block {
+  background:
+    radial-gradient(circle at 50% 92%, rgba(196, 58, 56, 0.72) 0, rgba(96, 28, 42, 0.45) 25%, rgba(9, 20, 37, 0) 55%),
+    #071426;
+}
+
+.hero__content {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.hero__bottom-arr {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hero__bg-text {
+  z-index: 2;
+  transform: translate3d(0, 0, 0) scale(1.1);
+}
+
+.hero__bg-samurai {
+  z-index: 4;
+}
+
+.hero__bg-figure {
+  opacity: 0.26;
+  z-index: 1;
+}
+
+.hero__bg-circle {
+  opacity: 0.62;
+}
+
+.samurai-katana__neon {
+  filter: drop-shadow(0 0 12px rgba(255, 87, 78, 0.75));
+}
+
+.hero-parallax-bottom__content {
+  min-height: 100vh;
+}
+
+.bottom-block {
+  min-height: 100vh;
+}
+
+@media (max-width: 720px) {
+  .header {
+    left: 1rem;
+    top: 1rem;
+  }
+
+  .header__logo {
+    width: 86px;
+  }
+}
