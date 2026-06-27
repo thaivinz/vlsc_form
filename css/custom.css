@@ -70,18 +70,18 @@ body {
 }
 
 .bottom-block {
-  min-height: 100vh;
+  display: none;
 }
 
 .contact-panel {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  margin-top: 5.5rem;
-  padding: clamp(4rem, 7vw, 6.5rem) clamp(1rem, 6vw, 7.5rem) clamp(4rem, 7vw, 6.5rem);
+  min-height: clamp(48rem, 64vw, 62rem);
+  margin-top: 0;
+  padding: clamp(6rem, 8vw, 8.5rem) clamp(1rem, 6vw, 7.5rem) clamp(3rem, 5vw, 4.5rem);
   overflow: hidden;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -98,7 +98,9 @@ body {
 .contact-panel__bg,
 .contact-panel__bg-item {
   position: absolute;
-  inset: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .contact-panel__bg {
@@ -107,30 +109,32 @@ body {
 
 .contact-panel__bg-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  display: block;
 }
 
 .contact-panel__bg-item.item-1 {
+  z-index: 1;
   opacity: 0.9;
 }
 
 .contact-panel__bg-item.item-2 {
+  z-index: 2;
   opacity: 0.72;
   mix-blend-mode: screen;
 }
 
 .contact-panel__form-wrap {
   position: relative;
-  z-index: 2;
-  width: min(58rem, 100%);
+  z-index: 3;
+  width: min(49.75rem, 100%);
   max-width: 100%;
   margin: 0 auto;
 }
 
 .contact-panel .bottom-block__form-ttl {
-  margin-bottom: 3.75rem;
-  font-size: clamp(3rem, 5.6vw, 5rem);
+  margin-bottom: clamp(2.7rem, 4.2vw, 3.75rem);
+  font-size: clamp(3rem, 4.7vw, 4.5rem);
   line-height: 1;
   letter-spacing: 0;
   color: #fff;
@@ -146,9 +150,9 @@ body {
   background: rgba(17, 17, 35, 0.94);
   color: #fff;
   border: 0;
-  font-size: clamp(1.5rem, 2.45vw, 2.08rem);
+  font-size: clamp(1.45rem, 1.75vw, 1.95rem);
   line-height: 1.2;
-  margin-bottom: 0.78rem;
+  margin-bottom: 0.65rem;
   box-shadow: none;
   backdrop-filter: none;
 }
@@ -160,18 +164,18 @@ body {
 }
 
 .contact-panel .bottom-block__form input {
-  height: clamp(5.75rem, 7.8vw, 6.65rem);
-  padding: 0 clamp(2rem, 3vw, 2.65rem);
+  height: clamp(4.25rem, 5.2vw, 5.3rem);
+  padding: 0 clamp(1.7rem, 2.4vw, 2.2rem);
 }
 
 .contact-panel .bottom-block__form textarea {
-  height: clamp(19.5rem, 31vw, 24.2rem);
-  padding: clamp(2rem, 3vw, 2.65rem);
+  height: clamp(15rem, 22vw, 19.6rem);
+  padding: clamp(1.55rem, 2vw, 2rem);
 }
 
 .contact-panel .bottom-block__form-submit-wrap {
-  margin-top: 2rem;
-  height: clamp(5.8rem, 7.8vw, 6.8rem);
+  margin-top: 1.45rem;
+  height: clamp(4.75rem, 5.6vw, 5.5rem);
 }
 
 .contact-panel .bottom-block__form-submit {
@@ -182,7 +186,7 @@ body {
 }
 
 .contact-panel .bottom-block__form-submit .btn-content {
-  font-size: clamp(1.75rem, 2.35vw, 2.25rem);
+  font-size: clamp(1.55rem, 1.9vw, 1.95rem);
   line-height: 1;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -210,8 +214,8 @@ body {
   }
 
   .contact-panel {
-    margin-top: 3.5rem;
-    padding: 3.5rem 1rem 4rem;
+    min-height: 44rem;
+    padding: 3.25rem 1rem 3rem;
   }
 
   .contact-panel .bottom-block__form-ttl {
